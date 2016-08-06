@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styles/common.css" type="text/css">
+    <link rel="stylesheet" href="styles/floors.css" type="text/css">
+    <link rel="stylesheet" href="styles/header.css" type="text/css">
+    <link rel="stylesheet" href="styles/footer.css" type="text/css">
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+
+            $('#myCarousel').carousel({
+                interval: 5000
+            });
+
+            $('#carousel-text').html($('#slide-content-0').html());
+
+            //Handles the carousel thumbnails
+            $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+            });
+
+
+            // When the carousel slides, auto update the text
+            $('#myCarousel').on('slid.bs.carousel', function (e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html"><img src="images/logo.png"></a>
+            </div>
+            <nav>
+                <div class="nav-container">
+                    <ul>
+                        <li>
+                            <a href="index.html">Начало</a>
+                        </li>
+                        <li class="dropdown first">
+                            <a id="menu" class="menu">Продукти</a>
+                            <ul class="dropdown-content" id="menu-content">
+                                <li>
+                                    <a href="inner-doors.html">Интериорни врати</a>
+                                </li>
+                                <li>
+                                    <a href="outer-doors.html">Входни врати</a>
+                                </li>
+                                <li>
+                                    <a href="floors.html">Ламиниран паркет</a>
+                                </li>
+                                <li>
+                                    <a href="tools.html">Инструменти</a>
+                                </li>
+                                <li>
+                                    <a href="fasteners.html">Крепежни елементи</a>
+                                </li>
+                                <!--<li>-->
+                                    <!--<a href="blinders.html">Щори</a>-->
+                                <!--</li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="about.html">За нас</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div id="main_area">
+            <!-- Slider -->
+            <div class="row">
+                <div class="col-xs-12" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-4 col-md-4" id="carousel-bounding-box">
+                            <div class="carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        <img src="images/floors/15290_37245.jpg">
+                                        <p>37245</p>
+                                    </div>
+                                    <div class="item" data-slide-number="1">
+                                        <img src="images/floors/15338_D34075_AH.jpg">
+                                        <p>4075</p>
+                                    </div>
+                                    <div class="item" data-slide-number="2">
+                                        <img src="images/floors/15351_D3713.jpg">
+                                        <p>713</p>
+                                    </div>
+                                    <div class="item" data-slide-number="3">
+                                        <img src="images/floors/15372_D37345.jpg">
+                                        <p>7345</p>
+                                    </div>
+                                    <div class="item" data-slide-number="4">
+                                        <img src="images/floors/15390_D37444.jpg">
+                                        <p>7444</p>
+                                    </div>
+                                    <div class="item" data-slide-number="5">
+                                        <img src="images/floors/15401_D37527.jpg">
+                                        <p>7527</p>
+                                    </div>
+                                    <div class="item" data-slide-number="6">
+                                        <img src="images/floors/15417_D37637.jpg">
+                                        <p>7637</p>
+                                    </div>
+                                    <div class="item" data-slide-number="7">
+                                        <img src="images/floors/15426_D37677.jpg">
+                                        <p>7677</p>
+                                    </div>
+                                    <div class="item" data-slide-number="8">
+                                        <img src="images/floors/15527_D3709.jpg">
+                                        <p>709</p>
+                                    </div>
+                                    <div class="item" data-slide-number="9">
+                                        <img src="images/floors/15536_D37232.jpg">
+                                        <p>7232</p>
+                                    </div>
+                                    <div class="item" data-slide-number="10">
+                                        <img src="images/floors/15546_D37266sd.jpg">
+                                        <p>7266</p>
+                                    </div>
+                                    <div class="item" data-slide-number="11">
+                                        <img src="images/floors/15561_D37319.jpg">
+                                        <p>7319</p>
+                                    </div>
+                                    <div class="item" data-slide-number="12">
+                                        <img src="images/floors/15629_D37844_DK.jpg.jpg">
+                                        <p>7844</p>
+                                    </div>
+                                    <div class="item" data-slide-number="13">
+                                        <img src="images/floors/15633_D38058_DK.jpg.jpg">
+                                        <p>8058</p>
+                                    </div>
+                                    <div class="item" data-slide-number="14">
+                                        <img src="images/floors/29685_34011_Eiche_Fiorano_jpg.jpg">
+                                        <p>4011</p>
+                                    </div>
+                                    <div class="item" data-slide-number="15">
+                                        <img src="images/floors/29696_D34237.jpg">
+                                        <p>4237</p>
+                                    </div>
+                                    <div class="item" data-slide-number="16">
+                                        <img src="images/floors/29746_D34236.jpg">
+                                        <p>4236</p>
+                                    </div>
+                                    <div class="item" data-slide-number="17">
+                                        <img src="images/floors/29777_D37863_DK_jpg.jpg">
+                                        <p>7863</p>
+                                    </div>
+                                    <div class="item" data-slide-number="18">
+                                        <img src="images/floors/31704_D34072_PO.jpg">
+                                        <p>4072</p>
+                                    </div>
+                                    <div class="item" data-slide-number="19">
+                                        <img src="images/floors/31713_K4350_DK.jpg">
+                                        <p>4350</p>
+                                    </div>
+                                    <div class="item" data-slide-number="20">
+                                        <img src="images/floors/31715_K4358_DK.jpg">
+                                        <p>4358</p>
+                                    </div>
+                                    <div class="item" data-slide-number="21">
+                                        <img src="images/floors/31720_K4360_DK.jpg">
+                                        <p>4360</p>
+                                    </div>
+                                    <div class="item" data-slide-number="22">
+                                        <img src="images/floors/31721_K4361_DK.jpg">
+                                        <p>4361</p>
+                                    </div>
+                                    <div class="item" data-slide-number="23">
+                                        <img src="images/floors/31726_K4362_DK.jpg">
+                                        <p>4362</p>
+                                    </div>
+                                    <div class="item" data-slide-number="24">
+                                        <img src="images/floors/32329_D37523.jpg">
+                                        <p>7523</p>
+                                    </div>
+                                    <div class="item" data-slide-number="25">
+                                        <img src="images/floors/32842_DK4363_dk_jpg.jpg">
+                                        <p>4363</p>
+                                    </div>
+                                    <div class="item" data-slide-number="26">
+                                        <img src="images/floors/32845_DK4364_dk_jpg.jpg">
+                                        <p>4364</p>
+                                    </div>
+                                    <div class="item" data-slide-number="27">
+                                        <img src="images/floors/32860_DK4376_dk_jpg.jpg">
+                                        <p>4376</p>
+                                    </div>
+                                    <div class="item" data-slide-number="28">
+                                        <img src="images/floors/32863_DK4377_dk_jpg.jpg">
+                                        <p>4377</p>
+                                    </div>
+                                    <div class="item" data-slide-number="29">
+                                        <img src="images/floors/32869_DK4380_dk_jpg.jpg">
+                                        <p>4380</p>
+                                    </div>
+                                    <div class="item" data-slide-number="30">
+                                        <img src="images/floors/32872_DK4381_dk_jpg.jpg">
+                                        <p>4381</p>
+                                    </div>
+                                    <div class="item" data-slide-number="31">
+                                        <img src="images/floors/32875_DK4382_dk_jpg.jpg">
+                                        <p>4382</p>
+                                    </div>
+                                    <div class="item" data-slide-number="32">
+                                        <img src="images/floors/32878_DK4383_dk_jpg.jpg">
+                                        <p>4383</p>
+                                    </div>
+                                </div><!-- Carousel nav -->
+                                <a class="left glyphicon lefty-arrow" href="#myCarousel" role="button" data-slide="prev"></a>
+                                <a class="right glyphicon righty-arrow" href="#myCarousel" role="button" data-slide="next"></a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-8 col-lg-8" id="carousel-text">
+                            <div class="hidden-sm hidden-xs" id="slider-thumbs">
+                                <!-- Bottom switcher of slider -->
+                                <ul class="gallery">
+
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-0"><img src="images/floors/15290_37245.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-1"><img src="images/floors/15338_D34075_AH.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-2"><img src="images/floors/15351_D3713.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-3"><img src="images/floors/15372_D37345.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-4"><img src="images/floors/15390_D37444.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-5"><img src="images/floors/15401_D37527.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-6"><img src="images/floors/15417_D37637.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-7"><img src="images/floors/15426_D37677.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-8"><img src="images/floors/15527_D3709.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-9"><img src="images/floors/15536_D37232.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-10"><img src="images/floors/15546_D37266sd.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-11"><img src="images/floors/15561_D37319.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-12"><img src="images/floors/15629_D37844_DK.jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-13"><img src="images/floors/15633_D38058_DK.jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-14"><img src="images/floors/29685_34011_Eiche_Fiorano_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-15"><img src="images/floors/29696_D34237.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-16"><img src="images/floors/29746_D34236.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-17"><img src="images/floors/29777_D37863_DK_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-18"><img src="images/floors/31704_D34072_PO.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-19"><img src="images/floors/31713_K4350_DK.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-20"><img src="images/floors/31715_K4358_DK.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-21"><img src="images/floors/31720_K4360_DK.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-22"><img src="images/floors/31721_K4361_DK.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-23"><img src="images/floors/31726_K4362_DK.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-24"><img src="images/floors/32329_D37523.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-25"><img src="images/floors/32842_DK4363_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-26"><img src="images/floors/32845_DK4364_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-27"><img src="images/floors/32860_DK4376_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-28"><img src="images/floors/32863_DK4377_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-29"><img src="images/floors/32869_DK4380_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-30"><img src="images/floors/32872_DK4381_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-31"><img src="images/floors/32875_DK4382_dk_jpg.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-32"><img src="images/floors/32878_DK4383_dk_jpg.jpg"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!--<div id="slide-content" style="display: none;">-->
+                            <!--<div id="slide-content-0">-->
+                                <!--<h1>1665 Royal Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                    <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-1">-->
+                                <!--<h1>1668 Appalachia Maple</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-2">-->
+                                <!--<h1>1675 Spreewald Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-3">-->
+                                <!--<h1>1688 Flaming Beech</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-4">-->
+                                <!--<h1>4288 Fremont Elm</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-5">-->
+                                <!--<h1>5167 Honey Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-6">-->
+                                <!--<h1>5534 Auckland Elm</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-7">-->
+                                <!--<h1>5167 Honey Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-8">-->
+                                <!--<h1>5559 Astoria Walnut</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-9">-->
+                                <!--<h1>8098 Arizona Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-10">-->
+                                <!--<h1>8213 Frosted Pear</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-11">-->
+                                <!--<h1>8220 Surf Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-12">-->
+                                <!--<h1>8463 Sea Breeze Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-13">-->
+                                <!--<h1>8814 Living Beech</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-14">-->
+                                <!--<h1>8816 Saragossa Oak</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-15">-->
+                                <!--<h1>4288 Fremont Elm</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-16">-->
+                                <!--<h1>8926 White Washed Ash</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-17">-->
+                                <!--<h1>9343 Rio Cherry</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-18">-->
+                                <!--<h1>9396 Mangona</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div id="slide-content-19">-->
+                                <!--<h1>9400 Canadian Elm</h1>-->
+                                <!--<ul>-->
+                                    <!--<li> Dimensions:-->
+                                        <!--1,285 x 192 x 7</li>-->
+                                    <!--<li> Guaranteed for 15 years</li>-->
+                                    <!--<li> Aquastop 7mm</li>-->
+                                    <!--<li> Eco Friendly</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Twin Clic</b>-->
+                                        <!--<p>Easy to lay with: Twin clic</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 23</b>-->
+                                        <!--<p>For heavy usage in domestic areas</p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<b>Class 31 / AC 3</b>-->
+                                        <!--<p>For moderate usage in commercial areas</p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div><!--/Slider-->
+
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-column site-map">
+                <h2>Продукти</h2>
+                <ul>
+
+                    <li>
+                        <a href="#">Ламиниран паркет</a>
+                    </li>
+                    <li>
+                        <a href="#">Врати</a>
+                    </li>
+                    <li>
+                        <a href="#">Щори</a>
+                    </li>
+                    <li>
+                        <a href="#">Крепежни елементи</a>
+                    </li>
+                    <li>
+                        <a href="#">Инструменти</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer-column social-media">
+                <h2>
+                    <span>Fix Market ЕООД</span>
+                </h2>
+                <a href="https://www.facebook.com/pages/%D0%A4%D0%98%D0%9A%D0%A1-%D0%9C%D0%90%D0%A0%D0%9A%D0%95%D0%A2-%D0%95%D0%9E%D0%9E%D0%94/621410867964251?ref=ts&fref=ts" target="_blank" class="fb"></a>
+                <a href="#" class="twitter"></a>
+                <a href="https://plus.google.com/u/0/118376665100626059982/posts" class="gplus"></a>
+            </div>
+            <div class="footer-column fb-like-box">
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages/ФИКС-МАРКЕТ-ЕООД/621410867964251?ref=ts&fref=ts&amp;width&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; " allowTransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

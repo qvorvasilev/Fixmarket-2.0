@@ -1,0 +1,49 @@
+section{
+    margin: 5rem auto;
+}
+section img{
+    width: 100% !important;
+}
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+a.lefty-arrow {
+    position: absolute;
+    top: 80px;
+    left: 2%;
+    display: inline-block;
+    background:url("../images/arrowhead-left.png") no-repeat;
+    background-size: 70px 65px;
+    background-position: -15px;
+    width: 59px;
+    height: 59px;
+}
+.gallery{
+    list-style-type: none;
+}
+.gallery a{
+    height: 150px;
+    overflow: hidden;
+}
+
+.carousel-inner p{
+    color: white;
+    background-color: #acacac;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2px;
+    border-radius: 15px;
+}
+a.righty-arrow{
+    position: absolute;
+    top: 80px;
+    right: 2%;
+    display: inline-block;
+    background:url("../images/arrowhead-right.png") no-repeat;
+    background-position: 0 -4px;
+    background-size: 70px 65px;
+    width: 59px;
+    height: 59px;
+}

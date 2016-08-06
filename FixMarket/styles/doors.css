@@ -1,0 +1,93 @@
+section{
+    margin: 4rem auto;
+}
+.doorsBox{
+    width: 100%;
+    display: inline-block;
+}
+.doorsBox>div{
+    margin-left: auto;
+    width: 19.5%;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.doorsBox p{
+    background-color: #acacac;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px;
+    border-radius: 15px;
+}
+.doorsBox img {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    transition:All 1s ease;
+    -webkit-transition:All 1s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+    transform: scale(1);
+-webkit-transformscale(1);
+    -moz-transform:scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+}
+.doorsBox a:focus{
+    border:none;
+}
+.doorsBox img:focus {
+    border:none;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    z-index: 1000;
+
+
+
+    /*-webkit-box-shadow: 0px 0px 59px 20px rgba(0,0,0,0.8);*/
+    /*-moz-box-shadow: 0px 0px 59px 20px rgba(0,0,0,0.8);*/
+    /*box-shadow: 0px 0px 59px 20px rgba(0,0,0,0.8);*/
+}
+
+
+
+
+/*========================*/
+/*=======RESPONSIVE=======*/
+/*========================*/
+
+@media all and (min-width: 641px) and (max-width: 870px){
+    .doorsBox>div{
+        width: 32.5%;
+    }
+}
+
+@media all and (min-width: 341px) and ( max-width:640px) {
+    .doorsBox>div{
+        width: 49%;
+
+    }
+    .doorsBox{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media all and (min-width: 100px) and ( max-width:340px) {
+    .doorsBox>div{
+        width: 100%;
+
+    }
+    .doorsBox{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+}
