@@ -8,7 +8,8 @@ section{
 }
 .info{
     display: inline-block;
-    width: 40%;
+    /*width: 40%;*/
+    float: left;
     vertical-align: top;
 }
 .info h1{
@@ -18,16 +19,17 @@ section{
     margin-top: 5rem;
 }
 .info div div, p{
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .right{
-    float: right;
+    /*float: right;*/
     vertical-align: top;
     margin-top: 0 !important;
 }
 .map{
     display: inline-block;
-    width: 59%;
+    /*width: 59%;*/
+    float: right;
     text-align: right;
 }
 .map iframe{
@@ -35,18 +37,22 @@ section{
 	height:600px;!important
 }
 
-@media all and (min-width: 641px) and (max-width: 1160px) {
-    .info, .map, .map iframe{
-        display: block;
-        width: 100%;
+@media all and (min-width: 641px) and (max-width: 1260px) {
+    .info, .map{
+        /*display: block;*/
+        /*width: 100%;*/
     }
     #map_canvas{
         float: none;
         margin: 5rem auto;
     }
+    .map iframe {
+        width: 400px;
+        height: 300px; !important
+    }
 
 }
-@media all and (min-width: 300px) and (max-width: 640px) {
+@media all and (min-width: 300px) and (max-width: 870px) {
     .info, .map, .map iframe{
         display: block;
         width: 100%;
