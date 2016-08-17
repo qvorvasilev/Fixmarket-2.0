@@ -1,212 +1,91 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head lang="en">-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title></title>-->
-
-    <!--<link rel="stylesheet" href="styles/test.css" type="text/css">-->
-    <!--&lt;!&ndash;<link rel="stylesheet" href="styles/common.css" type="text/css">&ndash;&gt;-->
-    <!--<script src="scripts/test.js"></script>-->
-<!--</head>-->
-<!--<body>-->
-<!--<header>-->
-    <!--<div class="container">-->
-        <!--<div class="header-container">-->
-            <!--<div class="logo-container">-->
-                <!--<a href="index.html"><img src="images/logo.png"></a>-->
-            <!--</div>-->
-            <!--<nav>-->
-                <!--<div class="nav-container">-->
-                    <!--<ul>-->
-                        <!--<li>-->
-                            <!--<a href="index.html">Начало</a>-->
-                        <!--</li>-->
-                        <!--<li class="dropdown first">-->
-                            <!--<a href="#" id="menu" class="menu">Продукти</a>-->
-                            <!--<ul class="dropdown-content" id="menu-content">-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd 1</a>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd2</a>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd3</a>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd4</a>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd5</a>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<a href="#">dasd6</a>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="about.html">За нас</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="contacts.html">Контакти</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</nav>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</header>-->
-<!--</body>-->
-<!--</html>-->
-
-
-
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="styles/common.css" type="text/css">
-    <link rel="stylesheet" href="styles/about.css" type="text/css">
-    <script src="scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/test.css">
+    <style>
+        .image-source-link {
+            color: #98C3D1;
+            /*transform: scale(1.5);*/
+        }
+        img.mfp-img{
 
-    <!--<script src="scripts/jquery-3.1.0.js"></script>-->
+            transform: scale(1.5);
+        }
+        .mfp-with-zoom .mfp-container,
+        .mfp-with-zoom.mfp-bg {
+            opacity: 0;
+            -webkit-backface-visibility: hidden;
+            /* ideally, transition speed should match zoom duration */
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
 
-    <link rel="stylesheet" href="styles/test.css" type="text/css">
-    <link rel="stylesheet" href="styles/footer.css" type="text/css">
+        .mfp-with-zoom.mfp-ready .mfp-container {
+            opacity: 1;
+        }
+        .mfp-with-zoom.mfp-ready.mfp-bg {
+            opacity: 0.8;
+        }
 
-    <!--<link rel="stylesheet" href="styles/common.css" type="text/css">-->
-    <script src="scripts/test.js"></script>
-
+        .mfp-with-zoom.mfp-removing .mfp-container,
+        .mfp-with-zoom.mfp-removing.mfp-bg {
+            opacity: 0;
+        }
+    </style>
 
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="header-container">
-            <div class="logo-container">
-                <a href="index.html"><img src="images/logo.png"></a>
-            </div>
-            <nav>
-                <div class="nav-container">
-                    <ul>
-                        <li>
-                            <a href="index.html">Начало</a>
-                        </li>
-                        <li class="dropdown first">
-                            <a href="#" id="menu" class="menu">Продукти</a>
-                            <ul class="dropdown-content" id="menu-content">
-                                <li>
-                                    <a href="#">Интериорни врати</a>
-                                </li>
-                                <li>
-                                    <a href="#">Входни врати</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ламиниран паркет</a>
-                                </li>
-                                <li>
-                                    <a href="#">Инструменти</a>
-                                </li>
-                                <li>
-                                    <a href="#">Крепежни елементи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Щори</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="about.html">За нас</a>
-                        </li>
-                        <li>
-                            <a href="contacts.html">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
+<div class="zoom-gallery">
+    <!--
 
+    Width/height ratio of thumbnail and the main image must match to avoid glitches.
 
-<section>
-    <div class="container">
+    If ratios are different, you may add CSS3 opacity transition to the main image to make the change less noticable.
 
-        <article>
-            <p>
-                Фирма <strong>Фикс Маркет</strong> е създадена през 2007г. и  стартира своята дейност в сферата на търговия на едро
-                и дребно с крепежни елементи и инструменти. Ние предлагаме широка гама асортимент на различни видове
-                болтове, гайки, шайби, дюбели, винтове, анкери, планки и др. крепежни елементи както  и свредла,
-                дискове, накрайници и др инструменти. Основната ни цел е качествени стоки на достъпни цени за всеки
-                наш клиент.
-            </p>
-            <p>
-                През 2008г. фирмата разширява своята дейност в продажбата на ламинирани подови настилки - ламиниран
-                паркет, первази и аксесоари към тях.
-            </p>
-            <p>
-                От 2009г.  Фикс Маркет  се занимава и  с търговия на широка гама входни и интериорни врати.
-            </p>
-            <p>
-                От  2011г.  предлагаме и  различни видове щори, тенти, сенници , ветрозащита- изработени по поръчка на клиента.
-            </p>
-            <p>
-                Наши приоритети са:
-            </p>
-            <ol>
-                <li>Оптимално качество за  всички   наши  продукти.</li>
-                <li>Бързо и професионално обслужване на клиентите.</li>
-                <li>Лоялност и разбиране към всеки наш клиент</li>
-                <li>Разумна ценова политика, различни нива на отстъпки и преференциални условия.</li>
-                <li>Бърза доставка и разнос до посочения от клиента адрес.</li>
-            </ol>
-        </article>
-    </div>
-</section>
+     -->
+    <a href="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" data-source="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" title="Into The Blue" style="width:400px;height:854px;">
+        <img src="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" width="100" height="254">
+    </a>
+    <a href="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" data-source="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" title="Light Sabre" style="width:82px;height:125px;">
+        <img src="images/02.6bc887a45c3721cfb42bfd934b1fa6357.jpg" width="100" height="254">
+    </a>
+</div>
+<script src="scripts/jquery-3.1.0.js"></script>
+<script src="scripts/test.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.zoom-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true,
+                titleSrc: function(item) {
+                    return item.el.attr('title') + ' <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank"></a>';
+                }
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300, // don't foget to change the duration also in CSS
+                opener: function(element) {
+                    return element.find('img');
+                }
+            }
 
+        });
+    });
+</script>
 
-<footer>
-    <div class="container">
-        <div class="footer-container">
-            <div class="footer-column site-map">
-                <h2>Продукти</h2>
-                <ul>
-
-                    <li>
-                        <a href="#">Ламиниран паркет</a>
-                    </li>
-                    <li>
-                        <a href="#">Врати</a>
-                    </li>
-                    <li>
-                        <a href="#">Щори</a>
-                    </li>
-                    <li>
-                        <a href="#">Крепежни елементи</a>
-                    </li>
-                    <li>
-                        <a href="#">Инструменти</a>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="footer-column social-media">
-                <h2>
-                    <span>Fix Market ЕООД</span>
-                </h2>
-                <a href="https://www.facebook.com/pages/%D0%A4%D0%98%D0%9A%D0%A1-%D0%9C%D0%90%D0%A0%D0%9A%D0%95%D0%A2-%D0%95%D0%9E%D0%9E%D0%94/621410867964251?ref=ts&fref=ts" target="_blank" class="fb"></a>
-                <a href="#" class="twitter"></a>
-                <a href="https://plus.google.com/u/0/118376665100626059982/posts" class="gplus"></a>
-            </div>
-            <div class="footer-column fb-like-box">
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages/ФИКС-МАРКЕТ-ЕООД/621410867964251?ref=ts&fref=ts&amp;width&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; " allowTransparency="true"></iframe>
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
 </html>
